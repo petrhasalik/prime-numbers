@@ -8,7 +8,7 @@
   * [grunt-cli](http://gruntjs.com/getting-started)
   * [bowerjs](http://bower.io/)
   
-_Follow install steps_
+_Follow the installation steps_
   
 
 #Via git:
@@ -16,7 +16,7 @@ _Follow install steps_
 
 ```bash
 $ git clone https://github.com/petrhasalik/prime-numbers.git
-$ cd sample_app
+$ cd prime-numbers
 ```
 
 Create local.env.js in the server/config/local.env.js
@@ -49,8 +49,8 @@ $ bower install
 ```bash
 $ grunt daemon:start
 ```
-_server then running on port 8080_
-Proxy this with for e.g. Nginx or access directly
+_server is running on port :8080_
+You need to set-up a proxy with for e.g. Nginx or access the app directly from your web browser
 
 ## Stop deamon
 
