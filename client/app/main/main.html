@@ -1,0 +1,46 @@
+<header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>Sample app !</h1>
+    <p class="lead">Prime numbers viewer</p>
+      <span class="fa-stack fa-5x">
+        <i class="fa fa-square-o fa-stack-2x"></i>
+        <i class="fa fa-graduation-cap fa-stack-1x"></i>
+      </span>
+        <p>
+        <a style="color: white;" href="https://github.com/petrhasalik/prime-numbers"><i class="fa fa-bitbucket fa-lg"></i> Source</a> 
+        | 
+        <a style="color: white;" href="http://docs.sampleapp1.apiary.io/"><i class="fa fa-book fa-lg"></i> REST API documentation</a>
+       </p>
+  </div>
+
+</header>
+
+<div class="container">
+  <div class="row" ng-if="primeNumbers.items">
+    <div class="col-lg-6">
+      <h1 class="page-header">Prime numbers:</h1>
+      <div class="list-group" infinite-scroll="nextPage()" infinite-scroll-disabled='busy || isAll'>
+        <a href="" ui-sref="main.detail({number: item.prime_number})" class="list-group-item" ng-class="{'active': $stateParams.number == item.prime_number}" ng-repeat="item in primeNumbers.items">{{$index + 1}}: [ {{item.prime_number}} ] [ {{item.prime_number | toWords}} ]</a>
+        <div ng-show='busy'>Loading data...</div>
+      </div>
+      <h2 ng-show="isAll">It is all folks!.....</h2>
+      
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <h1 class="page-header">Detail</h1>
+        <div ui-view></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <p>
+        <a href="https://github.com/petrhasalik/prime-numbers"><i class="fa fa-bitbucket fa-lg"></i> Source</a> 
+        | 
+        <a href="http://docs.sampleapp1.apiary.io/"><i class="fa fa-book fa-lg"></i> REST API documentation</a>
+       </p>
+  </div>
+</footer>
