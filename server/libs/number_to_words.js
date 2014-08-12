@@ -21,7 +21,7 @@ exports.convert = function(number) {
 	// iterate through all characters of the number
 	for (var i = 0; i < len; i++) {
 		if ((len - i) % 3 === 2) {
-			// is first character one
+			// is the first character one?
 			if (characters[i] === '1') {
 				str += vocab.tenToNineteen[Number(characters[i + 1])] + ' ';
 				i++;

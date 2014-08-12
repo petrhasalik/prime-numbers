@@ -1,0 +1,65 @@
+FORMAT: 1A
+HOST: http://www.google.com
+
+# Sample App
+This is documentation for the REST API of sample app
+   
+* No authorization is required
+* All collections can be called with _limit and _offset parameters
+* Use the https protocol for all API calls
+* All responses are in JSON format ( Content-Type: application/json ), XML is not supported
+* Standard [HTTP codes](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes) are used for the propagation of error states
+* Supported encoding is UTF-8
+* All JSON keys are [snake_case](http://en.wikipedia.org/wiki/Snake_case)
+* All metadata uses the underscore prefix. For example self entity pointer: _self
+* Next step on collection is defined in _next
+
+
+# Prime numbers
+Prime numbers related resources of the **Prime numbers API**
+
+## Prime numbers Collection [/prime_numbers{?_limit,_offset,max,max_type}]
+* max_type variant: n_primes (max is first n prime numbers), prime_number (max is maximal prime number)
+    
+### List all Prime numbers [GET]
++ Response 200 (application/json)
+
+        {
+            "items":
+                [
+                    {
+                    "prime_number": "2", "_self": "/prime_numbers/2"
+                    }, 
+                    {
+                    "prime_number": "3", "_self": "/prime_numbers/3"
+                    },
+                    {
+                    "prime_number": "5", "_self": "/prime_numbers/5"
+                    },
+                    {
+                    "prime_number": "7", "_self": "/prime_numbers/7"
+                    }
+                ]
+            "_self": "/prime_numbers?max=1000&_offset=0&_limit=20&max_type=n_primes",
+            "_next": "/prime_numbers?max=1000&_offset=20&_limit=40&max_type=n_primes"
+        }
+        
++ Response 413 (applicaton/json)
+
+        {"message": "Collection is too big, try smaller range"}
+        
+
+## Prime number [/prime_numbers/{number}]
+A single prime number object with all its details
+
++ Parameters
+    + number (required, number) ... Number param must be a prime number.
+
+### Retrieve a Note [GET]
++ Response 200 (application/json)
+
+        { "prime_number": 2, "in_words": "two", "_self": "/prime_numbers/2" }
+            
++ Response 404 (application/json)
+
+        {"mesage": "Prime number not found"} 
