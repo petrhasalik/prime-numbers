@@ -57,5 +57,5 @@ $ grunt daemon:stop
 ```
 
 ## API documentation
-[apiary](http://docs.sampleapp1.apiary.io/)
+[apiary](http://docs.primenumbers.apiary.io/)
 
