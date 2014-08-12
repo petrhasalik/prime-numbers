@@ -11,7 +11,7 @@
 _Follow the installation steps_
   
 
-#Via git:
+#Git:
 
 
 ```bash
@@ -19,8 +19,7 @@ $ git clone https://github.com/petrhasalik/prime-numbers.git
 $ cd prime-numbers
 ```
 
-Create local.env.js in the server/config/local.env.js
-example content
+Create local.env.js in the server/config/local.env.js. Sample content:
 ```javascript
 'use strict';
 
@@ -49,8 +48,7 @@ $ bower install
 ```bash
 $ grunt daemon:start
 ```
-_server is running on port :8080_
-You need to set-up a proxy with for e.g. Nginx or access the app directly from your web browser
+_The server is running on port :8080_
 
 ## Stop deamon
 
@@ -61,6 +59,3 @@ $ grunt daemon:stop
 ## Api documentation
 [apiary](http://docs.sampleapp1.apiary.io/)
 
-## License
-
-MIT
