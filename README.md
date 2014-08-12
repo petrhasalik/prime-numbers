@@ -56,6 +56,6 @@ _The server is running on port :8080_
 $ grunt daemon:stop
 ```
 
-## Api documentation
+## API documentation
 [apiary](http://docs.sampleapp1.apiary.io/)
 
