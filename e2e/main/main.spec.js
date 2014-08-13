@@ -9,8 +9,9 @@ describe('Main View', function() {
   });
 
   it('should include jumbotron with correct data', function() {
-    expect(page.h1El.getText()).toBe('\'Allo, \'Allo!');
-    expect(page.imgEl.getAttribute('src')).toMatch(/assets\/images\/yeoman.png$/);
-    expect(page.imgEl.getAttribute('alt')).toBe('I\'m Yeoman');
+    expect(page.h1El.getText()).toBe('Sample app !');
+    expect(page.perex.getText()).toBe('Prime numbers viewer');
+    expect(page.bitbucketLink.getAttribute('href')).toBe('https://github.com/petrhasalik/prime-numbers');
+    expect(page.apiaryLink.getAttribute('href')).toBe('http://docs.primenumbers.apiary.io/');
   });
 });

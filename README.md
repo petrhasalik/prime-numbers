@@ -19,7 +19,7 @@ $ git clone https://github.com/petrhasalik/prime-numbers.git
 $ cd prime-numbers
 ```
 
-Create local.env.js in the server/config/local.env.js. Sample content:
+Create local.env.js in the server/config/local.env.js with the following sample content:
 ```javascript
 'use strict';
 
@@ -54,6 +54,19 @@ _The server is running on port :8080_
 
 ```bash
 $ grunt daemon:stop
+```
+
+## Integration and Unit tests
+
+```bash
+$ grunt test
+```
+
+# E2E tests
+
+```bash
+$ npm run update-webdriver 
+$ grunt test:e2e
 ```
 
 ## API documentation

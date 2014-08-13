@@ -11,6 +11,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'client/bower_components/lodash/dist/lodash.compat.js',
       'client/bower_components/jquery/dist/jquery.js',
       'client/bower_components/angular/angular.js',
       'client/bower_components/angular-mocks/angular-mocks.js',
@@ -18,8 +19,10 @@ module.exports = function(config) {
       'client/bower_components/angular-cookies/angular-cookies.js',
       'client/bower_components/angular-sanitize/angular-sanitize.js',
       'client/bower_components/angular-route/angular-route.js',
-      'client/bower_components/lodash/dist/lodash.compat.js',
+
       'client/bower_components/angular-ui-router/release/angular-ui-router.js',
+      'client/bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js',
+      'client/bower_components/angular-loading-bar/build/loading-bar.js',
       'client/app/app.js',
       'client/app/app.coffee',
       'client/app/**/*.js',
@@ -57,7 +60,7 @@ module.exports = function(config) {
     logLevel: config.LOG_INFO,
 
 
-    // enable / disable watching file and executing tests when any file changes
+    // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
 
 

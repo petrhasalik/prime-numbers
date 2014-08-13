@@ -32,12 +32,12 @@ exports.getList = function(req, res, next) {
 			return {
 				prime_number: item,
 				// self link
-				_self: "api/prime_numbers/" + item
+				_self: "/api/prime_numbers/" + item
 			} 
 		}),
-		_self: 'api/prime_numbers?max=' + maxPrimeNumber + '&_offset=' + offset + '&_limit=' + limit + '&max_type=' + maxType,
+		_self: '/api/prime_numbers?max=' + maxPrimeNumber + '&_offset=' + offset + '&_limit=' + limit + '&max_type=' + maxType,
 		// It is the best practice to keep the logic on the backend (minimal logic on frontend is always better)
-		_next: 'api/prime_numbers/?max=' + maxPrimeNumber + '&_offset=' + limit + '&_limit=' + ((limit - offset) + Number(limit)) + '&max_type=' + maxType
+		_next: '/api/prime_numbers?max=' + maxPrimeNumber + '&_offset=' + limit + '&_limit=' + ((limit - offset) + Number(limit)) + '&max_type=' + maxType
 	}
 	res.json(response);
 };

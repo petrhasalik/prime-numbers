@@ -28,20 +28,20 @@ Prime numbers related resources of the **Prime numbers API**
             "items":
                 [
                     {
-                    "prime_number": "2", "_self": "/prime_numbers/2"
+                    "prime_number": "2", "_self": "/api/prime_numbers/2"
                     }, 
                     {
-                    "prime_number": "3", "_self": "/prime_numbers/3"
+                    "prime_number": "3", "_self": "/api/prime_numbers/3"
                     },
                     {
-                    "prime_number": "5", "_self": "/prime_numbers/5"
+                    "prime_number": "5", "_self": "/api/prime_numbers/5"
                     },
                     {
-                    "prime_number": "7", "_self": "/prime_numbers/7"
+                    "prime_number": "7", "_self": "/api/prime_numbers/7"
                     }
                 ]
-            "_self": "/prime_numbers?max=1000&_offset=0&_limit=20&max_type=n_primes",
-            "_next": "/prime_numbers?max=1000&_offset=20&_limit=40&max_type=n_primes"
+            "_self": "/api/prime_numbers?max=1000&_offset=0&_limit=20&max_type=n_primes",
+            "_next": "/api/prime_numbers?max=1000&_offset=20&_limit=40&max_type=n_primes"
         }
         
 + Response 413 (applicaton/json)
@@ -58,7 +58,7 @@ A single prime number object with all its details
 ### Retrieve a Note [GET]
 + Response 200 (application/json)
 
-        { "prime_number": 2, "in_words": "two", "_self": "/prime_numbers/2" }
+        { "prime_number": 2, "in_words": "two", "_self": "/api/prime_numbers/2" }
             
 + Response 404 (application/json)
 
