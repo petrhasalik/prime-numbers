@@ -9,7 +9,7 @@
   * [bowerjs](http://bower.io/)
   
 _Follow the installation steps_
-  
+
 
 #Git:
 
@@ -48,7 +48,7 @@ $ bower install
 ```bash
 $ grunt daemon:start
 ```
-_The server is running on port :8080_
+_The server is running on port :8888_
 
 ## Stop deamon
 
